@@ -1,0 +1,303 @@
+header h1 {
+    font-family: 'Inter', sans-serif;
+}
+body {
+    background-color: #f3f5fc;
+    display: flex;
+    height: 90vn;
+    width: 90vw;
+    min-height: 100%;
+    font-family: 'Inter', sans-serif;
+}
+
+textarea {
+    background-color: #f3f5fc;
+    color: #0A3871;
+    /*Tirar as bordas da textarea */
+    border: none;
+    outline: none;
+    /*Tirar o icone de mudar o tamanho da textarea */
+    resize: none;
+}
+
+ #logo {
+    margin: 22% 0 0 3%;
+    transition: 1s all;
+ }
+
+ #logo:hover {
+    animation: expandir 1s linear;
+ }
+ /* Animação Logo */
+ @keyframes expandir {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+ }
+
+ .titulo {
+    position: absolute;
+    top: 4%;
+    left: 25%;
+    font-size: 150%;
+    line-height: 150%;
+    color: #0A3871;
+ }
+
+ .titulo:hover {
+    animation: piscar 1s linear infinite;
+ }
+ /* Animação titulo */
+
+ @keyframes piscar {
+    0% {
+        opacity: 1;
+    }
+    50%{
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 1;
+    }
+ }
+
+ .entrada {
+    box-sizing: border-box;
+    width: 55%;
+    height: 90%;
+    margin: 20px 0 0 0px;
+    justify-content: center;
+    padding: 10px 80px;
+ }
+
+ .resultados { 
+    /*Box Branco */
+    position: absolute;
+    width: 25%;
+    height: 90%;
+    left: 63%;
+    top:15px;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.1);
+    border-radius: 32px;
+ }
+
+ .textoEntrada {
+    /*Caixa para a entrada do texto */
+    position: absolute;
+    width: 45%;
+    height: 45%;
+    left: 8.5%;
+    top: 15%;
+
+    border: none;
+    background-color: transparent;
+    margin: 30px 20px 10px 20px;
+
+    font-size: 20px;
+    text-align: left;
+    color: #0A3871;
+    /* Impede a entrada de maiúsculo apenas com css */
+    text-transform: lowercase;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: digita 4s steps(60, end);
+ }
+
+ .textoEntrada::placeholder {
+    color: #0A3871;
+ }
+
+ /* animação digitar */
+ @keyframes digita {
+    from {width: 0;}
+ }
+ 
+ .textoSaida {
+    position: absolute;
+    width: 90%;
+    height: 110px;
+    left: 0px;
+    top: 65%;
+    border: none;
+    background-color: transparent;
+    margin: 30px 20px 10px 20px;
+    font-size: 17px;
+    color: #495057;
+    /* Impede a entrada de maiúsculas apenas com css */
+    text-transform: lowercase;
+ }
+
+ #saida {
+    position: absolute;
+    width: 85%;
+    height: 70%;
+    left: 0px;
+    top: 3%;
+    border: none;
+    background-color: transparent;
+    margin: 30px 20px 10px 20px;
+    font-size: 17px;
+    text-align: center;
+    color: #495057;
+    text-transform: lowercase;
+ }
+
+ .info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 0px;
+    gap: 8px;
+
+    position: absolute;
+    width: 340px;
+    height: 18px;
+    left: 10%;
+    top: 74%;
+ }
+
+ .info p {
+    font-size: 12px;
+    color: #495057;
+    margin: 0 0 0 5px;
+ }
+
+ #iconExclamacao {
+    animation: expandir 0.6s linear infinite;
+    animation: piscar 0.6 linear infinite;
+ }
+
+ .botoes {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0%;
+    gap: 24px;
+    position: absolute;
+    width: 13%;
+    height: 67px;
+    left: 10%;
+    top: 79%;
+ }
+
+ .botaoCopia {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 24px;
+    position: absolute;
+    width: 50%;
+    height: 10%;
+    left: 12%;
+    top: 85%;
+ }
+
+ .botao1 {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    width: 150%;
+    height: 60px;
+
+    background: #0A3871;
+    border-radius: 24px;
+    box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, 1);
+
+    color: white;
+    justify-content: center;
+    align-items: center;
+
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+ }
+
+ .botao1:hover {
+    background-color: #3e41e0;
+    filter: drop-shadow(2px 4px 2px #00000025);
+ }
+
+ .botao1:active {
+    box-shadow: none;
+ }
+
+ .botao2 {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding: 24px;
+    gap: 8px;
+
+    width: 150%;
+    height: 60px;
+
+    background: #D8DFE8;
+
+    border: 1px solid #0A3871;
+    border-radius: 24px;
+    color: #0A3871;
+    box-shadow: 10px 10px 20px -8px rgba(0, 0, 0, 1);
+
+    justify-content: center;
+    align-items: center;
+
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+ }
+
+ .botao2:hover {
+    color: #0A3871;
+    border-color: #0F4C81;
+    background: #FFFFFF;
+    filter: drop-shadow(2px 4px 2px #00000025);
+ }
+
+ .botao2:active {
+    box-shadow: none;
+ }
+
+ .naoEncontrado h2 {
+    font-size: 25px;
+    color: #0A3871;
+    margin: 5%;
+    animation: expandir 0.5s linear;
+ }
+
+ .lupa {
+    width: 90%;
+    height: 45%;
+    margin: 30px 0px 0px;
+    animation: piscar 1.8s linear infinite;
+ }
+
+ footer {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    text-align: center;
+    justify-content: space-around;
+    font-size: 18px;
+    color: #0A3871;
+    height: 4 rem;
+    width: 95%;
+    bottom: 9px;
+ }
+
+ footer a {
+    text-decoration: none;
+    font-size: 15px;
+    color: #0A3871;
+ }
